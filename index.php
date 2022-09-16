@@ -1,1 +1,3 @@
-<?php include "view/index-view.php";
+<?php
+require "model/Database.php";
+include "view/index-view.php";
