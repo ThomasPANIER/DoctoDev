@@ -27,8 +27,10 @@
 
 <body>
 <!-- Add your site or application content here -->
+
 <?php include "nav.php"; ?>
-<header class="bg-primary">
+
+<header class="bg-secondary">
   <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate deleniti deserunt distinctio
       dolore, eveniet ipsa ipsum iure laboriosam libero molestiae quam vel voluptatem. Aspernatur enim est nisi
       obcaecati pariatur?</span><span>At atque culpa, dolores ipsa laborum minus, obcaecati perferendis reiciendis
@@ -36,5 +38,4 @@
       sequi totam ut?</span></p>
 </header>
 
-
-<p>Hello world! This is HTML5 Boilerplate.</p>
+<main class="container-fluid">

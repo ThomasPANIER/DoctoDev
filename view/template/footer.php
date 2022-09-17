@@ -1,3 +1,5 @@
+</main>
+
 <footer class="bg-primary">
   <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa distinctio dolorem ipsum non omnis pariatur
       perferendis quaerat quod? Accusamus nam obcaecati officia quibusdam quis. Dicta dolores exercitationem

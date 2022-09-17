@@ -1,7 +1,7 @@
 <?php
 // Classe pour se connecter à la base de données
 
-abstract class DataBase {
+abstract class DataBaseConnect {
 
   const HOST  = "localhost";
   const NAME = "hospitalE2N";
@@ -9,7 +9,7 @@ abstract class DataBase {
   const PASSWORD = "";
   private static ?PDO $db = null;
 
-  public static function bddConnect() {
+  public static function getPDOConnexion() {
     try {
       if (!self::$db) {
         $db = new PDO("mysql:host=" . self::HOST . ";dbname=" . self::NAME, self::LOGIN, self::PASSWORD);

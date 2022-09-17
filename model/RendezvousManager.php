@@ -8,7 +8,7 @@ class RendezvousManager
 
   function __construct()
   {
-    $this->db = DataBase::bddConnect();
+    $this->db = DataBaseConnect::bddConnect();
   }
 
 }

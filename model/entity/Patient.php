@@ -1,13 +1,14 @@
 <?php
 // Classe représentant les patients stockés en base de données
+
 class Patient
 {
-  protected $id;
-  protected $lastname;
-  protected $firstname;
-  protected $birthdate;
-  protected $phone;
-  protected $mail;
+  protected int $id;
+  protected string $lastname;
+  protected string $firstname;
+  protected string $birthdate;
+  protected string $phone;
+  protected string $mail;
 
   public function __construct(?array $data = null)
   {
@@ -22,97 +23,97 @@ class Patient
   }
 
   /**
-   * @return mixed
+   * @return int
    */
-  public function getId()
+  public function getId(): int
   {
     return $this->id;
   }
 
   /**
-   * @param mixed $id
+   * @param int $id
    */
-  public function setId($id): void
+  public function setId(int $id): void
   {
     $this->id = $id;
   }
 
   /**
-   * @return mixed
+   * @return string
    */
-  public function getLastname()
+  public function getLastname(): string
   {
     return $this->lastname;
   }
 
   /**
-   * @param mixed $lastname
+   * @param string $lastname
    */
-  public function setLastname($lastname): void
+  public function setLastname(string $lastname): void
   {
     $this->lastname = $lastname;
   }
 
   /**
-   * @return mixed
+   * @return string
    */
-  public function getFirstname()
+  public function getFirstname(): string
   {
     return $this->firstname;
   }
 
   /**
-   * @param mixed $firstname
+   * @param string $firstname
    */
-  public function setFirstname($firstname): void
+  public function setFirstname(string $firstname): void
   {
     $this->firstname = $firstname;
   }
 
   /**
-   * @return mixed
+   * @return string
    */
-  public function getBirthdate()
+  public function getBirthdate(): string
   {
     return $this->birthdate;
   }
 
   /**
-   * @param mixed $birthdate
+   * @param string $birthdate
    */
-  public function setBirthdate($birthdate): void
+  public function setBirthdate(string $birthdate): void
   {
     $this->birthdate = $birthdate;
   }
 
   /**
-   * @return mixed
+   * @return string
    */
-  public function getPhone()
+  public function getPhone(): string
   {
     return $this->phone;
   }
 
   /**
-   * @param mixed $phone
+   * @param string $phone
    */
-  public function setPhone($phone): void
+  public function setPhone(string $phone): void
   {
     $this->phone = $phone;
   }
 
   /**
-   * @return mixed
+   * @return string
    */
-  public function getMail()
+  public function getMail(): string
   {
     return $this->mail;
   }
 
   /**
-   * @param mixed $mail
+   * @param string $mail
    */
-  public function setMail($mail): void
+  public function setMail(string $mail): void
   {
     $this->mail = $mail;
   }
