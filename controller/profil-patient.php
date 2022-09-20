@@ -1,7 +1,6 @@
 <?php
 
-require "model/PatientManager.php";
-//require "model/entity/Patient.php";
+require "../model/PatientManager.php";
 
 $patientManager = new PatientManager();
 
@@ -9,9 +8,9 @@ $error = "Aucun patient n'est enregistré";
 
 if(isset($_GET["id"]) && !empty($_GET["id"])) {
 
-  $showPatient = $patientManager->getPatientById($_GET["id"]);
+  $patient = $patientManager->getPatientById($_GET["id"]);
 
-  if(!$showPatient) {
+  if(!$patient) {
     $error = "Le patient sélectionné n'existe pas, essayez une nouvelle sélection.";
   }
 
@@ -21,12 +20,14 @@ else {
 }
 
 if(isset($_POST['confirm'])) {
+
   $deletePatient = $patientManager->deletePatient($_GET["id"]);
 
   if($deletePatient) {
     header("Location: liste-patients.php");
     exit;
   }
+
 }
 
-include "view/profile-patient-view.php";
+include "../view/profile-patient-view.php";

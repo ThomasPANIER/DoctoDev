@@ -1,9 +1,5 @@
 <?php
 
-require "model/PatientManager.php";
-//require "model/RendezvousManager.php";
+header("Location: controller/index.php");
 
-$patientManager = new PatientManager();
-$patient = new Patient();
 
-include "view/index-view.php";

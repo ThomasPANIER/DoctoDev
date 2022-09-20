@@ -1,4 +1,5 @@
 <?php
+
 // Classe représentant les patients stockés en base de données
 
 class Patient
@@ -12,15 +13,16 @@ class Patient
 
   public function __construct(?array $data = null)
   {
-    if($data) {
-      foreach($data as $key => $value) {
-        $setter= "set". ucfirst($key);
-        if(method_exists($this, $setter)) {
+    if ($data) {
+      foreach ($data as $key => $value) {
+        $setter = "set" . ucfirst($key);
+        if (method_exists($this, $setter)) {
           $this->$setter(htmlspecialchars($value));
         }
       }
     }
   }
+
 
   /**
    * @return int
@@ -31,12 +33,14 @@ class Patient
   }
 
   /**
-   * @param int $id
+   * @param $id
+   * @return void
    */
-  public function setId(int $id): void
+  public function setId($id)
   {
     $this->id = $id;
   }
+
 
   /**
    * @return string
@@ -46,10 +50,12 @@ class Patient
     return $this->lastname;
   }
 
+
   /**
-   * @param string $lastname
+   * @param $lastname
+   * @return void
    */
-  public function setLastname(string $lastname): void
+  public function setLastname($lastname)
   {
     $this->lastname = $lastname;
   }
@@ -63,9 +69,10 @@ class Patient
   }
 
   /**
-   * @param string $firstname
+   * @param $firstname
+   * @return void
    */
-  public function setFirstname(string $firstname): void
+  public function setFirstname($firstname)
   {
     $this->firstname = $firstname;
   }
@@ -79,9 +86,10 @@ class Patient
   }
 
   /**
-   * @param string $birthdate
+   * @param $birthdate
+   * @return void
    */
-  public function setBirthdate(string $birthdate): void
+  public function setBirthdate($birthdate)
   {
     $this->birthdate = $birthdate;
   }
@@ -95,9 +103,10 @@ class Patient
   }
 
   /**
-   * @param string $phone
+   * @param $phone
+   * @return void
    */
-  public function setPhone(string $phone): void
+  public function setPhone($phone)
   {
     $this->phone = $phone;
   }
@@ -111,9 +120,10 @@ class Patient
   }
 
   /**
-   * @param string $mail
+   * @param $mail
+   * @return void
    */
-  public function setMail(string $mail): void
+  public function setMail($mail)
   {
     $this->mail = $mail;
   }

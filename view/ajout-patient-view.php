@@ -1,4 +1,4 @@
-<?php include "view/template/header.php"; ?>
+<?php include "../view/template/header.php"; ?>
 
 <div class="row justify-content-center">
 
@@ -6,7 +6,7 @@
 
     <h2 class="text-center">Enregistrer un nouveau patient</h2>
 
-    <form class="mt-5" action="ajout-patient.php" method="POST">
+    <form class="mt-5" action="../controller/ajout-patient.php" method="POST">
       <div class="mt-3">
         <label class="form-label">Nom</label>
         <?php echo inputText('lastname');  ?>
@@ -44,9 +44,12 @@
       </div>
       <input class="form-control btn btn-dark text-white my-2" name="addPatient" type="submit" value="Enregistrer">
     </form>
+    <div class="mt-3">
+      <a class="btn btn-primary col-5 p-1" href="../controller/liste-patients.php">Retour</a>
+    </div>
 
   </div>
 
 </div>
 
-<?php include "view/template/footer.php"; ?>
+<?php include "../view/template/footer.php"; ?>
