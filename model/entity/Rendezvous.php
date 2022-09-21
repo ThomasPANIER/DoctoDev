@@ -1,10 +1,12 @@
 <?php
 
+// Classe représentant les rendez-vous stockés en base de données
+
 class Rendezvous
 {
-  protected $id;
-  protected $dateHour;
-  protected $idPatients;
+  protected int $id;
+  protected string $dateHour;
+  protected mixed $idPatients;
 
   public function __construct(?array $data = null)
   {
@@ -19,15 +21,16 @@ class Rendezvous
   }
 
   /**
-   * @return mixed
+   * @return int
    */
-  public function getId()
+  public function getId(): int
   {
     return $this->id;
   }
 
   /**
-   * @param mixed $id
+   * @param $id
+   * @return void
    */
   public function setId($id): void
   {
@@ -35,33 +38,37 @@ class Rendezvous
   }
 
   /**
-   * @return mixed
+   * @return string
    */
-  public function getDateHour()
+  public function getDateHour(): string
   {
     return $this->dateHour;
   }
 
   /**
-   * @param mixed $dateHour
+   * @param $dateHour
+   * @return void
    */
   public function setDateHour($dateHour): void
   {
     $this->dateHour = $dateHour;
   }
 
+
   /**
-   * @return mixed
+   * @return int
    */
-  public function getIdPatients()
+  public function getIdPatients(): int
   {
     return $this->idPatients;
   }
 
+
   /**
-   * @param mixed $idPatients
+   * @param $idPatients
+   * @return void
    */
-  public function setIdPatients($idPatients): void
+  public function setIdPatients($idPatients)
   {
     $this->idPatients = $idPatients;
   }

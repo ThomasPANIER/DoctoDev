@@ -13,6 +13,9 @@
           <a class="nav-link active" aria-current="page" href="../controller/liste-patients.php">Liste des patients</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../controller/liste-rendezvous.php">Liste des rendez-vous</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item dropdown">
@@ -21,14 +24,12 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="../controller/ajout-patient.php">Nouveau patient</a></li>
-            <li><a class="dropdown-item" href="#">Nouveau rendez-vous</a></li>
+            <li><a class="dropdown-item" href="../controller/ajout-rendezvous.php">Nouveau rendez-vous</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
+
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

@@ -33,8 +33,8 @@ class PatientManager extends DataBase
    */
   public function getPatients(): bool|array
   {
-    $response=$this->db->query("SELECT * FROM patients");
-    $result = $response->fetchAll(PDO::FETCH_ASSOC);
+    $query=$this->db->query("SELECT * FROM patients");
+    $result = $query->fetchAll(PDO::FETCH_ASSOC);
     foreach($result as $key=>$patients){
       $result[$key] = new Patient($patients);
     }
@@ -71,16 +71,16 @@ class PatientManager extends DataBase
     return $query;
   }
 
-  // Récupère l'id du patient
+  // Récupère l'id du patient par son lastname
   /**
-   * @param $id
+   * @param $lastname
    * @return mixed
    */
-  public function getPatientId($id): mixed
+  public function getPatientId($lastname): mixed
   {
-    $query = $this->db->prepare("SELECT id FROM patients WHERE id=:id");
+    $query = $this->db->prepare("SELECT id FROM patients WHERE lastname=:lastname");
     $query->execute([
-      "id" => $id
+      "lastname" => $lastname
     ]);
     return $query->fetch(PDO::FETCH_ASSOC);
   }
@@ -105,6 +105,30 @@ class PatientManager extends DataBase
       "phone" => $data->getPhone(),
       "mail" => $data->getMail()
     ]);
+  }
+
+
+  // Récupère un rendez-vous et son patient
+  /**
+   * @param int $id
+   * @return mixed
+   */
+  public function getPatientRendezvous(int $id): mixed
+  {
+    $query = $this->db->prepare(
+      "SELECT appointments.*, patients.*
+      FROM appointments
+      LEFT JOIN patients
+      ON appointments.idPatients = patients.id
+      WHERE patients.id = :id");
+    $query->execute([
+      "id" => $id
+    ]);
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+    if ($result) {
+      $result= new Rendezvous($result);
+    }
+    return $result;
   }
 
 }
