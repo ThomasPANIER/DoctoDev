@@ -37,4 +37,4 @@ if(isset($_POST['confirm'])) {
 
 }
 
-include "../view/details-rendezvous-view.php";
+include "../view/rendezvous-view.php";

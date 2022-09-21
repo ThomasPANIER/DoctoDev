@@ -109,24 +109,34 @@ class PatientManager extends DataBase
 
 
   // Récupère un rendez-vous et son patient
-  /**
-   * @param int $id
-   * @return mixed
-   */
-  public function getPatientRendezvous(int $id): mixed
+
+  public function getPatientRendezvous($id)
   {
-    $query = $this->db->prepare(
-      "SELECT appointments.*, patients.*
-      FROM appointments
-      LEFT JOIN patients
-      ON appointments.idPatients = patients.id
-      WHERE patients.id = :id");
+//    $query = $this->db->prepare(
+//      "SELECT appointments.*, patients.*
+//      FROM appointments
+//      LEFT JOIN patients
+//      ON appointments.idPatients = patients.id
+//      WHERE patients.id = :id");
+//    $query->execute([
+//      "id" => $id
+//    ]);
+      $query = $this->db->prepare(
+      "SELECT  patients.*, appointments.*
+            FROM patients
+            INNER JOIN appointments
+            ON patients.id = appointments.idPatients
+            WHERE appointments.idPatients =:idPatients");
     $query->execute([
-      "id" => $id
+      "idPatients" => $id
     ]);
-    $result = $query->fetch(PDO::FETCH_ASSOC);
-    if ($result) {
-      $result= new Rendezvous($result);
+    $result = $query->fetchAll(PDO::FETCH_ASSOC);
+//    if ($result) {
+//      $result= new Rendezvous($result);
+//    }
+//    return $result;
+    foreach($result as $key=>$rendezvous){
+      $result[$key] = new Rendezvous($rendezvous);
     }
     return $result;
   }

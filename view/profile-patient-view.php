@@ -21,6 +21,24 @@
               </li>
             </ul>
           </div>
+          <?php if($rendezvous): ?>
+            <div class="row mb-3">
+              <?php foreach($rendezvous as $index => $rendezvous) : ?>
+              <div class="col-6">
+                <div class="card h-100 text-center">
+                  <div class="card-header">
+                    Rendez-vous
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><?php echo "Date : " . $rendezvous->getDateHour() ; ?></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <?php endforeach; ?>
+            </div>
+          <?php endif; ?>
           <div class="card-footer">
             <form class="row justify-content-evenly" method="POST">
               <a class="btn btn-primary col-5 p-1" href="../controller/liste-patients.php">Retour</a>

@@ -11,7 +11,7 @@
       <?php if(isset($_POST["updateRendezvous"])): ?>
         <div class="mt-3 text-center">
           <p class="form-control my3 bg-success">Modifications effectuées avec succès</p>
-          <a class="btn btn-dark col-5 p-1 " href="details-rendezvous.php?id=<?php echo $rendezvous->getId() ; ?>">Retour sur les détails du rendez-vous</a>
+          <a class="btn btn-dark col-5 p-1 " href="../controller/rendezvous.php?id=<?php echo $rendezvous->getId() ; ?>">Retour sur les détails du rendez-vous</a>
         </div>
       <?php endif; ?>
 
@@ -51,7 +51,7 @@
 
         <input class="form-control btn btn-dark text-white my-2" name="updateRendezvous" type="submit" value="Enregistrer">
         <div class="mt-3 text-center">
-          <a class="btn btn-primary col-5 p-1" href="details-rendezvous.php?id=<?php echo $rendezvous->getId() ; ?>">Retour</a>
+          <a class="btn btn-primary col-5 p-1" href="../controller/rendezvous.php?id=<?php echo $rendezvous->getId() ; ?>">Retour</a>
         </div>
       </form>
 

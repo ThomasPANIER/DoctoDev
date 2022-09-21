@@ -15,12 +15,11 @@
             <div class="card-body">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item"><?php echo "Date : " . $rendezvous->getDateHour() ; ?></li>
-<!--                <li class="list-group-item">--><?php //echo "Patient : " . $rendezvous->getIdPatients(); ?><!--</li>-->
               </ul>
             </div>
             <div class="card-footer">
               <div class="row justify-content-evenly">
-                <a class="btn btn-primary col-6 p-1" href="../controller/details-rendezvous.php?id=<?php echo $rendezvous->getId() ; ?>">Voir les détails</a>
+                <a class="btn btn-primary col-6 p-1" href="../controller/rendezvous.php?id=<?php echo $rendezvous->getId() ; ?>">Voir les détails</a>
               </div>
             </div>
           </div>

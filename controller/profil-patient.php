@@ -1,6 +1,7 @@
 <?php
 
 require "../model/PatientManager.php";
+require "../model/RendezvousManager.php";
 
 $patientManager = new PatientManager();
 
@@ -13,6 +14,9 @@ if(isset($_GET["id"]) && !empty($_GET["id"])) {
   if(!$patient) {
     $error = "Le patient sélectionné n'existe pas, essayez une nouvelle sélection.";
   }
+
+  $idPatients = $patient->getId();
+  $rendezvous = $patientManager->getPatientRendezvous($idPatients);
 
 }
 else {
