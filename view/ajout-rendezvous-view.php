@@ -6,7 +6,7 @@
 
     <h2 class="text-center">Enregistrer un nouveau rendez-vous</h2>
 
-    <form class="mt-5" action="../controller/ajout-rendezvous.php" method="POST">
+    <form class="" action="../controller/ajout-rendezvous.php" method="POST">
       <div class="mt-3">
         <label class="form-label">Date du rendez-vous</label>
         <?php echo inputDateTime('dateHour');  ?>

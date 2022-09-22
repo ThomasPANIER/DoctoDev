@@ -1,11 +1,7 @@
 </main>
 
-<footer class="bg-primary">
-  <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa distinctio dolorem ipsum non omnis pariatur
-      perferendis quaerat quod? Accusamus nam obcaecati officia quibusdam quis. Dicta dolores exercitationem
-      quisquam ut vel!</span><span>A accusantium architecto commodi doloremque eum libero nihil optio! Aut debitis
-      explicabo iusto nostrum pariatur voluptatum! Deleniti facere perspiciatis quidem. Alias aliquid dolore doloribus
-      iste minima, officia provident quam tempora!</span></p>
+<footer class="">
+
 </footer>
 
 <!-- JavaScript Bundle with Popper -->

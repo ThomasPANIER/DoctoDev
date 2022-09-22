@@ -10,7 +10,7 @@
     <?php if($patient): ?>
 
     <?php if(isset($_POST["updatePatient"])): ?>
-      <div class="mt-3 text-center">
+      <div class="text-center">
         <p class="form-control my3 bg-success">Modification effectuée avec succès</p>
         <a class="btn btn-dark col-5 p-1 " href="../controller/profil-patient.php?id=<?php echo $patient->getId() ; ?>">Retour au profil du patient</a>
       </div>

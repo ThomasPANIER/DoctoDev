@@ -28,14 +28,14 @@
 <body>
 <!-- Add your site or application content here -->
 
-<?php include "nav.php"; ?>
-
 <header class="bg-secondary">
-  <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate deleniti deserunt distinctio
-      dolore, eveniet ipsa ipsum iure laboriosam libero molestiae quam vel voluptatem. Aspernatur enim est nisi
-      obcaecati pariatur?</span><span>At atque culpa, dolores ipsa laborum minus, obcaecati perferendis reiciendis
-      tenetur ullam ut voluptatem. Doloribus eum possimus quam unde. Accusamus deserunt dolor ipsum nisi non rerum sed
-      sequi totam ut?</span></p>
+  <div>
+    <h1 class="text-center">DoctoDev</h1>
+    <hr class="bg-info mb-0">
+    <p class="text-center fs-5 p-3 mb-0">Chez DoctoDev l'expérimentation sur le patient est une priorité.</p>
+  </div>
 </header>
 
-<main class="container-fluid">
+<?php include "nav.php"; ?>
+
+<main class="container-fluid mt-5">

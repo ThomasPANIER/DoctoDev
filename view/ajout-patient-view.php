@@ -6,7 +6,7 @@
 
     <h2 class="text-center">Enregistrer un nouveau patient</h2>
 
-    <form class="mt-5" action="../controller/ajout-patient.php" method="POST">
+    <form class="" action="../controller/ajout-patient.php" method="POST">
       <div class="mt-3">
         <label class="form-label">Nom</label>
         <?php echo inputText('lastname');  ?>

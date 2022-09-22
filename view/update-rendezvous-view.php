@@ -15,7 +15,7 @@
         </div>
       <?php endif; ?>
 
-      <form class="mt-5 <?php if(isset($_POST["updateRendezvous"])): ?>hidden<?php endif; ?>" action="../controller/update-rendezvous.php" method="POST">
+      <form class="<?php if(isset($_POST["updateRendezvous"])): ?>hidden<?php endif; ?>" action="../controller/update-rendezvous.php" method="POST">
         <div class="mt-3 hidden">
           <label class="form-label" >id</label>
           <input class='form-control my-3 p-3' name='id' id='$id' type='text' value=<?php echo $rendezvous->getId() ; ?> >
