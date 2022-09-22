@@ -45,7 +45,7 @@
               <input class="btn btn-danger col-5 p-1" name="delete" type="submit" value="Supprimer le patient">
               <?php if(isset($_POST["delete"])): ?>
                 <form method="POST" action="">
-                  <input class="btn btn-danger col-5 p-1" name="confirm" type="submit" value="Confirmer suppression">
+                  <input class="btn btn-danger col-6 p-1" name="confirm" type="submit" value="Confirmer suppression">
                 </form>
               <?php endif; ?>
             </form>

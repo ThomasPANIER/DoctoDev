@@ -26,7 +26,7 @@
             <li><a class="dropdown-item" href="../controller/ajout-patient.php">Nouveau patient</a></li>
             <li><a class="dropdown-item" href="../controller/ajout-rendezvous.php">Nouveau rendez-vous</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="../controller/ajout-patient-rendez-vous.php">Ajouter un nouveau patient et son rendez-vous</a></li>
           </ul>
         </li>
 
