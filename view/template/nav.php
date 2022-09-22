@@ -16,7 +16,7 @@
           <a class="nav-link active" aria-current="page" href="../controller/liste-rendezvous.php">Liste des rendez-vous</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="../controller/searchForm.php">Link</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -31,10 +31,9 @@
         </li>
 
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <button class="d-flex btn btn-outline-dark">
+        <a class="dropdown-item" href="../controller/searchForm.php">Rechercher un patient</a>
+      </button>
     </div>
   </div>
 </nav>

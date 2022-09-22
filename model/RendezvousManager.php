@@ -40,6 +40,19 @@ class RendezvousManager extends DataBase
     return $result;
   }
 
+  // Récupère les 6 prochains les rendez-vous
+  /**
+   * @return bool|array
+   */
+  public function getFirstRendezvous(): bool|array
+  {
+    $query=$this->db->query("SELECT * FROM appointments ORDER BY dateHour ASC LIMIT 6");
+    $result = $query->fetchAll(PDO::FETCH_ASSOC);
+    foreach($result as $key=>$rendezvous){
+      $result[$key] = new Rendezvous($rendezvous);
+    }
+    return $result;
+  }
   // Récupère un rendez-vous par son id
   /**
    * @param $id

@@ -27,6 +27,21 @@ class PatientManager extends DataBase
     ]);
   }
 
+  // Recherche de patient
+  /**
+   * @param $terme
+   * @return bool|array
+   */
+  public function search($terme): bool|array
+  {
+    $query=$this->db->query('SELECT * FROM patients WHERE lastname LIKE "%'.$terme.'%" OR firstname LIKE "%'.$terme.'%"');
+    $result = $query->fetchAll(PDO::FETCH_ASSOC);
+    foreach($result as $key=>$patients){
+      $result[$key] = new Patient($patients);
+    }
+    return $result;
+  }
+
   // Récupère tous les patients
   /**
    * @return bool|array
@@ -109,32 +124,18 @@ class PatientManager extends DataBase
 
 
   // Récupère un rendez-vous et son patient
-
   public function getPatientRendezvous($id)
   {
-//    $query = $this->db->prepare(
-//      "SELECT appointments.*, patients.*
-//      FROM appointments
-//      LEFT JOIN patients
-//      ON appointments.idPatients = patients.id
-//      WHERE patients.id = :id");
-//    $query->execute([
-//      "id" => $id
-//    ]);
-      $query = $this->db->prepare(
-      "SELECT  patients.*, appointments.*
-            FROM patients
-            INNER JOIN appointments
-            ON patients.id = appointments.idPatients
-            WHERE appointments.idPatients =:idPatients");
+    $query = $this->db->prepare(
+    "SELECT  patients.*, appointments.*
+          FROM patients
+          INNER JOIN appointments
+          ON patients.id = appointments.idPatients
+          WHERE appointments.idPatients =:idPatients");
     $query->execute([
       "idPatients" => $id
     ]);
     $result = $query->fetchAll(PDO::FETCH_ASSOC);
-//    if ($result) {
-//      $result= new Rendezvous($result);
-//    }
-//    return $result;
     foreach($result as $key=>$rendezvous){
       $result[$key] = new Rendezvous($rendezvous);
     }
