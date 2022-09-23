@@ -1,1 +1,5 @@
-<?php include "view/index-view.php";
+<?php
+
+header("Location: controller/index.php");
+
+
